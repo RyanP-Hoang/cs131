@@ -1,0 +1,33 @@
+    1  passwd
+    2  wget www.github.com
+    3  pwd
+    4  cd cs131
+    5  git clone https://github.com/RyanP-Hoang/cs131.git
+    6  cd cs131
+    7  mkdir a1
+    8  cd a1
+    9  echo $HOME
+   10  id
+   11  ls /proc/ | grep mem
+   12  ls /proc/ | grep cpu
+   13  head -n 10 /proc/meminfo
+   14  head -n 10 /proc/cpuinfo
+   15  tail -n 10 /proc/cpuinfo
+   16  cat /proc/cpuinfo
+   17  ls /etc/ | grep release
+   18  cat /etc/os-release
+   19  cd ..
+   20  cp/datasets/taxidata.tar.gz .
+   21  cd ..
+   22  cp /datasets/taxidata.tar.gz .
+   23  tar -xzvf taxidata.tar.gz -C cs131
+   24  cd cs131
+   25  awk -F, '$2 == "2019-05-12" {total += $10; count++} END {print total/count}' taxidata/2019-05.csv | bc
+   26  awk -F, '$2 == "2019-05-12"' taxidata/2019-05.csv | wc -l
+   27  head -n 5 taxidata/2019-05.csv
+   28  awk -F, '$2 ~ /^"2019-05-12/' taxidata/2019-05.csv | wc -l
+   29  awk -F, '$2 ~ /^"2019-05-12/ {total += $17; count++} END {print total/count}' taxidata/2019-05.csv | bc
+   30  awk -F, '$2 ~ /^"2019-05-12/ && $17 > max {max = $17} END {print max}' taxidata/2019-05.csv | bc
+   31  awk -F, '$2 ~ /^"2019-05-12/ && $4 >= 3 {print $8}' taxidata/2019-05.csv | sort | uniq -c | sort -nr | head -n 10
+   32  cd a1
+   33  history > cmds.log
