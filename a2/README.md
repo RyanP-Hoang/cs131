@@ -18,6 +18,22 @@ To use this command, provide two arguments:
 
 ./backup.sh <source_directory> <backup_directory>
 
-(For example, when there is source directory a and backup directory b, both within the same directory.)
+For example, when there is source directory a with text file z and an empty backup directory b, both within the same directory a2
 
-./backup.sh a b
+## EXAMPLE
+
+[ryansu24@sjsu a2]$ ./backup.sh a b
+
+Backup of a created at b/backup_20240703.tar.gz
+
+[ryansu24@sjsu a2]$ cd b
+
+[ryansu24@sjsu b]$ ls
+
+backup_20240703.tar.gz
+
+[ryansu24@sjsu b]$ tar -xzf backup_20240703.tar.gz
+
+[ryansu24@sjsu b]$ ls
+
+backup_20240703.tar.gz  z.txt
