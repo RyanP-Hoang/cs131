@@ -11,14 +11,14 @@ This command is useful for creating periodic compressed backups of important dir
 ## How You Can Use This Command
 
 To use this command, provide two arguments:
-1. The source directory to back up.
-2. The backup directory where the compressed backup will be stored.
+1. The source directory to back up. This source directory must exist.
+2. The backup directory where the compressed backup will be stored. It will create a new backup directory if it doesn't exist
 
 ## Usage
 
 ./backup.sh <source_directory> <backup_directory>
 
-For example, when there is source directory a with text file z and an empty backup directory b, both within the same directory a2
+For example, when there is source directory a with z.txt and an empty backup directory b, both within the same directory a2
 
 ## EXAMPLE
 
