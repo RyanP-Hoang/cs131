@@ -24,7 +24,7 @@ fi
 mkdir -p "$backup_directory"
 
 # Create backup
-timestamp=$(date +%Y%m%d_%H%M%S)
+timestamp=$(date +%Y%m%d)
 backup_name="backup_${timestamp}.tar.gz"
 tar -czf "$backup_directory/$backup_name" -C "$source_directory" .
 if [ $? -eq 0 ]; then
