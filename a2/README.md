@@ -19,4 +19,5 @@ To use this command, provide two arguments:
 ./backup.sh <source_directory> <backup_directory>
 
 (For example, when there is source directory a and backup directory b, both within the same directory.)
+
 ./backup.sh a b
