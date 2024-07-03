@@ -18,7 +18,9 @@ To use this command, provide two arguments:
 
 ./backup.sh <source_directory> <backup_directory>
 
-For example, when there is source directory a with z.txt and an empty backup directory b, both within the same directory a2
+For example, when there is source directory a with z.txt and an empty backup directory b, both within the same directory a2.
+
+It will create a compressed backup named after the year, month, and day. When extracted, the contents of the source directory should appear.
 
 ## EXAMPLE
 
