@@ -18,3 +18,4 @@ awk -F, '$17 >= 10 {tips[$14]++} END {for (tip in tips) print tip, tips[tip]}' 2
 
 5)
 sort -t' ' -k2,2nr results.txt | head -5 >> a3.txt
+
